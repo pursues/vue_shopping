@@ -1,0 +1,87 @@
+/* 定义商品列表样式 */
+.list {
+	background: #fff;
+	padding: 0 10px;
+} 
+.list li {
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.list li img {
+	width: 100px;
+	float: left;
+}
+.list a {
+	text-decoration: none;
+	color: #000;
+}
+.list .container {
+	margin-left: 105px;
+	height: 60px;
+	position: relative;
+}
+.list h2 {
+	font-size: 18px;
+}
+.list .container p {
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+	right: 0;
+	font-size: 12px;
+	color: #666;
+}
+.list .container .price {
+	color: #06c1ae;
+}
+.list .container .sales {
+	float: right;
+}
+
+.lists .type li {
+	float: left;
+	width: 25%;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font-size: 12px;
+	line-height: 30px;
+	height: 30px;
+	background: #fff;
+	text-indent: 6px;
+	color: #666;
+}
+.lists .type li:last-child {
+	border-right: none;
+}
+.lists .type li span {
+	border: 4px solid transparent;
+	border-top: 4px solid #666;
+	position: relative;
+	top: 8px;
+	left: -4px;
+}
+.lists .load-more {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #06c1ae;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+}
+.lists .load-more .arrow {
+	font-size: 0;
+	border: 10px solid transparent;
+	border-top: 10px solid #06c1ae;
+	position: relative;
+	left: 5px;
+    top: 2px;
+}
+.lists .load-more .arrow.white {
+	border-top: 10px solid #fff;
+	position: absolute;
+    top: -13px;
+    left: -10px;
+}

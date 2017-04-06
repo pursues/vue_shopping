@@ -1,0 +1,111 @@
+.product .image {
+	position: relative;
+}
+.product .image img{
+	width:100%;
+}
+.product .image h1,
+.product .image p {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: #fff;
+}
+.product .image h1 {
+	font-size: 20px;
+	bottom: 28px;
+	color:#fff;
+}
+.product .price {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	height: 240px;
+	line-height: 50px;
+	margin-top:30px;
+}
+.product .price .models{
+	color: #06c1ae;
+	font-size: 16px;
+	margin-left: 10px;
+	line-height:40px;
+}
+.product .price .models em {
+	font-size: 16px;
+	float:right;
+	font-style: normal;
+	margin-right:10px;
+}
+.product .price .btn {
+	padding: 8px 15px;
+	float: right;
+	background: orange;
+	color: #fff;
+	 text-decoration:none;
+	line-height: 1em;
+	font-size: 14px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+.product .lostDesige{
+	width:100%;
+}
+.product .listFor{
+	width:100%;
+}
+.product .listFor span{
+    width: 100%;
+    height: 20px;
+    background: #eee;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    margin-left: 10px;
+}
+.product .listFor img{
+	width:100%;
+}
+
+.product .sale {
+	background: #fff;
+	padding: 10px 0;
+	margin-bottom: 10px;
+}
+.product .sale li{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	color: yellowgreen;
+	width: 50%;
+	text-indent: 10px;
+}
+.product .sale li span {
+	color: #666;
+}
+.product .footer .first{
+	width:100%;
+	height:200px;
+	background:#fff;
+	font-size:28px;
+	color:#000;
+	text-align:center;
+}
+
+.product .footer .first :last-child{
+	font-size:18px;
+}
+.product .footer ul{
+	background:#8E8E8E;
+	width:100%;
+	height:300px;
+}
+.product .footer ul li{
+	background:#8E8E8E;
+	width:100%;
+	height:100px;
+	color:#eee;
+}
+.product .footer ul li span{
+	padding:10px 10px;
+	color:#eee;
+	
+}

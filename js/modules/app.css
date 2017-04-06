@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	background: #efefef;
+}
+#app {
+	display: block;
+}
+/* 定义工具类 */
+.clearfix:after {
+	clear: both;
+	content: '';
+	display: block;
+} 
+.header {
+	background: #06c1ae;
+	height: 60px;
+	line-height: 60px;
+	color: #fff;
+}
+.header .go-back {
+	float: left;
+	position: relative;
+}
+.header .go-back span {
+	border: 12px solid transparent;
+	border-right: 12px solid #fff;
+	font-size: 0;
+	position: absolute;
+	left: -1px;
+	top: 19px;
+}
+.header .go-back .green {
+	border-right-color: #000;
+	top: -12px;
+	left: -10px;
+}
+.header .login {
+	float: right;
+	margin-right: 10px;
+	font-size: 14px;
+}
+.header h1 {
+	font-size: 24px;
+	text-align: center;
+	text-indent: 20px;
+}
+.search {
+	background: #fff;
+	padding: 5px 0;
+}
+.search input {
+	background: #efefef;
+	border-radius: 20px;
+	width: 80%;
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	margin: 0 auto;
+	display: block;
+}

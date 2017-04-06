@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+.app {
+	display: none;
+}
+.app .header{
+	background-image:url('img/timg.jpg');
+}
+</style>
+<!-- 定义视图容器 -->
+<div id="app" class="app">
+	<!-- 可以被所有组件复用的视图，定义在vue实例化对象中 -->
+	<header class="header">
+		<div class="go-back" v-on:click="goBack"><span><span class="green"></span></span></div>
+		<div class="login"><a :href="'#/login'">登录</a></div>
+		<h1>汽车之家</h1>
+	</header>
+	<div class="search" v-show="isShowSearch"><input v-model="search" type="text" placeholder="请输入搜索关键字" v-on:keydown.enter="showResult"></div>
+	<!-- 可以通过component元素来动态渲染组件 -->
+	<component :search="searchQuery" v-bind:is="view"></component>
+</div>
+
+<script type="text/template" id="tpl_home">
+	<section class="home" id="home">
+		<ul class="clearfix car"> 
+			<ul>
+			  	<li v-for="item in car" class="carImg"> 
+					<a :href="'#/product/' + item.id"> 
+					<img class="imgs" :src="'img/carousel/' + item.img" alt="">
+					</a>
+			 	</li>
+		 	</ul>
+			 <button class="pre">&lt;</button> 
+			 <button class="next">&gt;</button>
+			 <ul class="cirse">
+				<li class="carBtn"  v-for="item in car">
+			 	<p class="{{item.id}}">{{item.id}}</p>
+			 	</li>
+			 </ul>
+
+		</ul>
+
+
+		<ul class="type clearfix">
+			<!-- li要循环list数据来渲染 -->
+			<li v-for="item in list">
+				<a :href="'#/list/type/' + item.id">
+					<img v-bind:src="'img/icon/' + item.url" alt="">
+					<p>{{item.title}}</p>
+				</a>
+			</li>
+		</ul>
+		<!-- 定义广告模块 -->
+		<ul class="ad clearfix">
+			<li v-for="item in ad">
+				<a :href="'#product/' + item.id">
+					<img :src="'img/ad/' + item.url" alt="">
+				</a>
+			</li>
+		</ul>
+		<!-- 定义商品列表 -->
+		<ul class="list">
+			<li class="clearfix" v-for="item in items">
+				<a :href="'#/product/' + item.id">
+					<img :src="'img/list/' + item.img" alt="">
+					<div class="container">
+						<h2>{{item.title}}</h2>
+						<p>
+							<span class="price">{{item.price | priceFilter}}</span>
+							<span class="origin-price">{{item.orignPrice | originPriceFilter}}</span>
+							<span class="sales">{{item.sales | salesFilter}}</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>
+</script>
+<script type="text/template" id="tpl_list">
+	<section id="lists" class="lists">
+		<ul class="type clearfix">
+			<li v-for="item in type" v-on:click="sort(item.key)">
+				{{item.value}}
+				<span></span>
+			</li>
+		</ul>
+		<!-- 定义商品列表 -->
+		<ul class="list">
+			<li class="clearfix" v-for="item in list | filterBy search">
+				<a :href="'#/product/' + item.id">
+					<img :src="'img/list/' + item.img" alt="">
+					<div class="container">
+						<h2>{{item.title}}</h2>
+						<p>
+							<span class="price">{{item.price | priceFilter}}</span>
+							<span class="origin-price">{{item.orignPrice | originPriceFilter}}</span>
+							<span class="sales">{{item.sales | salesFilter}}</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="load-more" v-show="other.length" v-on:click="showAll">
+			<span>查看其他{{other.length}}条团购</span>
+			<span class="arrow"><span class="arrow white"></span></span>
+		</div>
+	</section>
+</script>
+<script type="text/template" id="tpl_product">
+	<section id="product" class="product">
+		<div class="image">
+			<img :src="'img/item/' + data.src" alt="">
+			<h1>{{data.title}}</h1>
+			<p>{{data.description}}</p>
+		</div>
+		<div class="price">
+		   <ul>
+			<li class="models">基础车型<em>218i</em></li>	
+			<li class="models">建议零售价(元)<em>{{data.price}}</em></li>
+			<li class="models">功率输出<em>{{data.output}}</em></li>
+			<li class="models">平均加速度<em>{{data.consume}}</em></li>
+			<li class="models">平均公里消耗<em>{{data.introduce}}</em></li>
+			<li class="btn"><a :href="'#/login'">立即购买</a></li>
+		   </ul>
+		</div>
+
+		<ul class="listDesige">  
+			<li v-for="item in list" class="listFor"> 
+				<img :src="'img/item/' + item.url">
+				<span>{{item.title}}</span>
+			</li>
+		</ul>
+		<ul class="sale clearfix">
+			<li>支持自动退货</li>
+			<li>支持随时退货</li>
+			<li><span>{{data.sales | salesFilter}}</span></li>
+		</ul>
+		<div class="footer"> 
+		 	<ul> 
+			 	<li class="first"> 
+			 		<p>{{data.bmw}}</p>
+			 		<p>{{data.good}}</p>
+			 	</li>
+			 	<li> 
+			 		<p> 
+			 		{{data.cantent}}<br>
+			 		<span>{{data.yu}}</span>
+			 		<span>{{data.zi}}</span>
+			 		<span>{{data.suo}}</span>
+			 		<span>{{data.cha}}</span>
+			 		<span>{{data.lian}}</span>
+			 		</p>
+			 	</li>
+			 	<li> 
+			 		<p> 
+			 		{{data.kuai}}<br>
+			 		<span>{{data.ding}}</span>
+			 		<span>{{data.zaixian}}</span>
+			 		<span>{{data.guangfang}}</span>
+			 		<span>{{data.hulian}}</span>
+			 		<span>{{data.falv}}</span>
+			 		</p>
+			 	</li>
+			 	<li> 
+			 		<p> 
+			 		{{data.qita}}<br>
+			 		<span>{{data.huachen}}</span>
+			 		<span>{{data.motuo}}</span>
+			 		<span>{{data.gao}}</span>
+			 		<span>{{data.yundong}}</span>
+			 		<span>{{data.grop}}</span>
+			 		</p>
+			 	</li>
+		 	</ul>
+		</div>
+	</section>
+</script>
+<script type="text/template" id="tpl_login"> 
+	<section id="login"> 
+		<div id="logins" class="logins"> 
+		<label>用&nbsp;户&nbsp;名&nbsp;:&nbsp;<input type="text" placeholder="请输入用户名"></label><br>
+		</div>
+		<div class="logins"> 
+			<label>密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;:&nbsp;<input type="password" placeholder="请输入密码"></label><br>
+		</div>	
+		<button class="reset">重置</button>
+		<button class="submit">密码</button>
+	</section>
+</script>
+<script type="text/javascript" data-main="js/bootstrap.js" src="js/lib/require.js"></script>
+</body>
+</html>

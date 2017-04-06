@@ -1,0 +1,162 @@
+{
+	"errno": 0,
+	"data": {
+		"ad": [
+			{
+				
+				"id": "1",
+				"url": "01.png"
+			},
+			{
+				
+				"id": "2",
+				"url": "02.png"
+			},
+			{
+				
+				"id": "3",
+				"url": "03.png"
+			},
+			{
+				
+				"id": "4",
+				"url": "04.png"
+			},
+			{
+				
+				"id": "5",
+				"url": "05.png"
+			},
+			{
+				
+				"id": "6",
+				"url": "06.png"
+			},
+			{
+				
+				"id": "7",
+				"url": "07.png"
+			},
+			{
+				
+				"id": "8",
+				"url": "08.png"
+			},
+			{
+				
+				"id": "9",
+				"url": "09.png"
+			},
+			{
+				
+				"id": "10",
+				"url": "10.png"
+			}
+		],
+		"list": [
+			{
+				"img": "01.jpg",
+				"title": "采用全新设计语言，全新绅宝",
+				"sales": 44,
+				"price": 17,
+				"orignPrice": 128,
+				"id": "1"
+			},
+			{
+				"img": "06.jpg",
+				"title": "荣威RX5纯电动版谍照",
+				"sales": 101,
+				"price": 130,
+				"orignPrice": 30,
+				"id": "2"
+			},
+			{
+				"img": "09.jpg",
+				"title": "2017年汽车可靠性排名：雷克萨斯六连冠",
+				"sales": 241,
+				"price": 44,
+				"orignPrice": 105,
+				"id": "3"
+			},
+			{
+				"img": "02.jpg",
+				"title": "内饰科技感提升 曝新款揽胜运动版谍照",
+				"sales": 13126,
+				"price": 45.5,
+				"orignPrice": 60,
+				"id": "4"
+			},
+			{
+				"img": "03.jpg",
+				"title": "兄弟联手打天下！体验斯柯达柯迪亚克",
+				"sales": 9890,
+				"price": 49.9,
+				"orignPrice": 70,
+				"id": "5"
+			},
+			{
+				"img": "04.jpg",
+				"title": "玩转改装 探访宝马御用改装厂有感",
+				"sales": 8,
+				"price": 88,
+				"orignPrice": 260,
+				"id": "6"
+			},
+			{
+				"img": "07.jpg",
+				"title": "捷豹F-TYPE的魅力究竟在哪？",
+				"sales": 3,
+				"price": 27,
+				"orignPrice": 300,
+				"id": "7"
+			},
+			{
+				"img": "08.jpg",
+				"title": "1.5T三缸/200马力 福特新嘉年华ST",
+				"sales": 12226,
+				"price": 17,
+				"orignPrice": 305,
+				"id": "8"
+			},
+			{
+				"img": "09.jpg",
+				"title": "J.D. Power进行汽车可靠性",
+				"sales": 11,
+				"price": 19,
+				"orignPrice": 338,
+				"id": "9"
+			},
+			{
+				"img": "10.jpg",
+				"title": "J.D. Power进行汽车可靠性",
+				"sales": 90,
+				"price": 68,
+				"orignPrice": 148,
+				"id": "10"
+			}
+		],
+		"car":[
+			{	
+				"id": "1",
+				"img": "01.jpg"
+			},
+			{
+				"id": "2",
+				"img": "02.jpg"
+			},
+			{
+				"id": "3",
+				"img": "03.jpg"
+			},
+			{
+				"id": "4",
+				"img": "04.jpg"
+			},
+			{
+				"id": "5",
+				"img": "05.jpg"
+			}
+
+		]
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"errno": 0,
+	"data": {
+		"list":[
+			{
+				"title":"设计",
+				"url": "01.jpg"
+			},
+			{
+				"title":"敞篷",
+				"url": "02.jpg"
+			},
+			{
+				"title":"性能",
+				"url": "03.jpg"
+			},
+			{
+				"title":"舒适性",
+				"url": "04.jpg"
+			},
+			{
+				"title":"导航",
+				"url": "05.jpg"
+			}
+		],
+		"src": "01.jpg",
+		"title": "开怀，肆意，",
+		"description": "BMW2系敞篷跑车",
+		"sales": 44,
+		"price": 289000,
+		"output":44,
+		"consume":9.6,
+		"introduce":5.8,
+		"orignPrice": 468,
+		"evaluate": 4.5,
+		"bmw":"BMW高效动力",
+		"good":"更少排放尾气，更多快乐驾驶",
+		"cantent":"联系我们",
+		"yu":"预约试驾",
+		"zi":"资讯信息",
+		"suo":"索取手册",
+		"cha":"查看经销商",
+		"lian":"联系我们",
+		"kuai":"快速链接",
+		"ding":"定制你的BMW",
+		"zaixian":"BMW在线",
+		"guangfang":"BMW官方旗舰店",
+		"hulian":"BMW互联网在线",
+		"falv":"法律声明",
+		"qita":"其他宝马网站",
+		"huachen":"华晨宝马",
+		"motuo":"BMW摩托车",
+		"gao":"BMW高尔夫",
+		"yundong":"BMW汽车衡运动",
+		"grop":"加入我们"
+	}
+		
+}
